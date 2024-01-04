@@ -1,6 +1,6 @@
 import {useEffect} from 'react'
 import './Home.css'
-import NavigationButton from '../../components/Connection/NavigationButton'
+import NavigationButton from '../../../Components/Connection/NavigationButton'
 
 export default function Home () {
 
