@@ -1,0 +1,60 @@
+.register {
+    display: flex;
+    flex-direction: column;
+}
+
+.register__header {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 5% auto;
+    margin-bottom: 2%;
+    justify-content: center;
+    align-items: center;
+}
+
+.register__h1 {
+    font-size: 3em;
+}
+
+.register__h2 {
+    font-size: 2em;
+    margin-top: -1%;
+    font-style: italic;
+}
+
+.register__row {
+    width: 60%;
+    margin: 2% 20%;
+    align-items: center;
+    display: flex;
+}
+
+.register__footer {
+    width: 40%;
+    align-items: center;
+    margin: auto 30%
+}
+
+.register__subtext {
+    text-decoration: underline;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.register__p {
+    cursor: pointer
+}
+
+#register__username {
+    margin: auto 5%;
+    width: 90%
+}
+
+#register__password {
+    margin: auto 5%;
+    width: 90%
+}
