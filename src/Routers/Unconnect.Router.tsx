@@ -1,8 +1,8 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Home from '../Unconnected/Normal_Home/Home.Unconnected';
-import AdminUnconnectedHome from '../Unconnected/Admin_Unconnected_Home/Admin.Unconnected.Home';
-import Login from '../Unconnected/Login/Login';
-import Register from '../Unconnected/Register/Register';
+import Home from '../Pages/Unconnected/Normal_Home/Home.Unconnected';
+import AdminUnconnectedHome from '../Pages/Unconnected/Admin_Unconnected_Home/Admin.Unconnected.Home';
+import Login from '../Pages/Unconnected/Login/Login';
+import Register from '../Pages/Unconnected/Register/Register';
 
 function UnconnectedRouter() {
   return (
