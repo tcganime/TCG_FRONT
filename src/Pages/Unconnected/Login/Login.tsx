@@ -13,10 +13,6 @@ export default function Login() {
 
 	const [visible, setVisible] = useState<boolean>(false)
 
-	// error handling
-	const [usernameError, setUsernameError] = useState<boolean>(false)
-	const [passwordError, setPasswordError] = useState<boolean>(false)
-
 	useEffect(() => {
 		document.title = "TCG Anime - Login"
 		// check if in the path if there is admin
@@ -27,7 +23,35 @@ export default function Login() {
 	}, [])
 
 	function LoginFunction() {
-		console.log(`Username: "${username}" Password: "${password}" and toAdmin: ${toAdmin}`)
+		if (username === '' || password === '') {
+			alert('Please fill all the form')
+			return
+		}
+
+		let search = `http://localhost:8000/${(toAdmin) ? 'admin' : ''}/user/login`
+
+		fetch(search, {
+			method: 'POST',
+			headers: {
+				'Content-Type': 'application/json'
+			},
+			body: JSON.stringify({ credential: username, password})
+		}).then((response: Response) => {
+			if (response.status !== 200) {
+				response.json().then((data: any) => {
+					alert(data.message)
+				})
+			} else {
+				response.json().then((data: any) => {
+					localStorage.setItem('token', data.token)
+					localStorage.setItem('refreshToken', data.refresh_token)
+					localStorage.setItem('admin', toAdmin.toString())
+					window.location.href = '/'
+				})
+			}
+		}).catch((err: Error) => {
+			console.log(err.message)
+		})
 	}
 
 	return (
@@ -55,6 +79,7 @@ export default function Login() {
 								color: '#A0CCDA',
 								opacity: 0.8,
 								fontSize: '2em',
+								margin: 'auto 1em',
 								"&::placeholder": {
 									opacity: 1,
 									fontSize: '3em',
@@ -81,6 +106,7 @@ export default function Login() {
 								color: '#A0CCDA',
 								opacity: 0.8,
 								fontSize: '2em',
+								margin: 'auto 1em',
 								"&::placeholder": {
 									opacity: 1,
 									fontSize: '3em',

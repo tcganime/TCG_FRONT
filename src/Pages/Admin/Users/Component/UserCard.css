@@ -1,0 +1,19 @@
+.user__card__image {
+    height: 150px;
+    width: auto;
+    border-radius: 100%;
+    object-fit: contain;
+}
+
+.user__card__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center,
+}
+
+.user__card__actions {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
