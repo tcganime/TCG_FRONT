@@ -45,10 +45,6 @@ function AdminUser() {
             <div className="admin__user__header">
                 <h1> Users </h1>
             </div>
-            <div className="admin__user__upper__body">
-                <h2> This page allows you to manage the users of the website. </h2>
-                <h2> Here you can see all the users, their informations and promote them to admin. </h2>
-            </div>
             <div className="admin__user__search">
                 <SearchBar
                     search={search}
@@ -70,7 +66,6 @@ function AdminUser() {
                             <div className="admin__user__card" key={searchUser.id}>
                                 <UserCard
                                     id={searchUser.id}
-                                    username={searchUser.username}
                                 />
                             </div>
                         ))
