@@ -1,0 +1,30 @@
+.admin__home {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin: auto 5%;
+}
+
+.admin__home__header {
+    font-size: 1.5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.admin__home__body {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 80%;
+    margin: auto 10%
+}
+
+.admin__home__body__section {
+    display: flex;
+    width: 70%;
+    margin: 2% 15%;
+    justify-content: center;
+    align-items: center;
+}

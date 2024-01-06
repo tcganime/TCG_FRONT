@@ -1,5 +1,5 @@
 import './Register.css'
-import { useState, useEffect} from 'react'
+import { useState, useEffect } from 'react'
 import { TextField, Box, Button } from '@mui/material'
 
 import AccountCircle from '@mui/icons-material/AccountCircle';
@@ -42,20 +42,20 @@ export default function Register() {
                         value={username}
                         onChange={(e) => setUsername(e.target.value)}
                         sx={{
-							input: {
-								color: '#A0CCDA',
-								opacity: 0.8,
-								fontSize: '2em',
-								"&::placeholder": {
-									opacity: 1,
-									fontSize: '3em',
-								},
-							},
-							label: { color: '#C6D8D3', fontSize: '1.75em', margin: 'auto 1em' },
-						}}
-						style={{
-							width: '100%'
-						}}
+                            input: {
+                                color: '#A0CCDA',
+                                opacity: 0.8,
+                                fontSize: '2em',
+                                "&::placeholder": {
+                                    opacity: 1,
+                                    fontSize: '3em',
+                                },
+                            },
+                            label: { color: '#C6D8D3', fontSize: '1.75em', margin: 'auto 1em' },
+                        }}
+                        style={{
+                            width: '100%'
+                        }}
                     />
                 </Box>
                 <Box className="register__row">
@@ -67,20 +67,20 @@ export default function Register() {
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
                         sx={{
-							input: {
-								color: '#A0CCDA',
-								opacity: 0.8,
-								fontSize: '2em',
-								"&::placeholder": {
-									opacity: 1,
-									fontSize: '3em',
-								},
-							},
-							label: { color: '#C6D8D3', fontSize: '1.75em', margin: 'auto 1em' },
-						}}
-						style={{
-							width: '100%'
-						}}
+                            input: {
+                                color: '#A0CCDA',
+                                opacity: 0.8,
+                                fontSize: '2em',
+                                "&::placeholder": {
+                                    opacity: 1,
+                                    fontSize: '3em',
+                                },
+                            },
+                            label: { color: '#C6D8D3', fontSize: '1.75em', margin: 'auto 1em' },
+                        }}
+                        style={{
+                            width: '100%'
+                        }}
                     />
                 </Box>
                 <Box className="register__row">
@@ -93,20 +93,20 @@ export default function Register() {
                         onChange={(e) => setPassword(e.target.value)}
                         type={visible ? "text" : "password"}
                         sx={{
-							input: {
-								color: '#A0CCDA',
-								opacity: 0.8,
-								fontSize: '2em',
-								"&::placeholder": {
-									opacity: 1,
-									fontSize: '3em',
-								},
-							},
-							label: { color: '#C6D8D3', fontSize: '1.75em', margin: 'auto 1em' },
-						}}
-						style={{
-							width: '100%'
-						}}
+                            input: {
+                                color: '#A0CCDA',
+                                opacity: 0.8,
+                                fontSize: '2em',
+                                "&::placeholder": {
+                                    opacity: 1,
+                                    fontSize: '3em',
+                                },
+                            },
+                            label: { color: '#C6D8D3', fontSize: '1.75em', margin: 'auto 1em' },
+                        }}
+                        style={{
+                            width: '100%'
+                        }}
                     />
                     {
                         (visible) ?
@@ -125,20 +125,20 @@ export default function Register() {
                         onChange={(e) => setPasswordConfirm(e.target.value)}
                         type={visible2 ? "text" : "password"}
                         sx={{
-							input: {
-								color: '#A0CCDA',
-								opacity: 0.8,
-								fontSize: '2em',
-								"&::placeholder": {
-									opacity: 1,
-									fontSize: '3em',
-								},
-							},
-							label: { color: '#C6D8D3', fontSize: '1.75em', margin: 'auto 1em' },
-						}}
-						style={{
-							width: '100%'
-						}}
+                            input: {
+                                color: '#A0CCDA',
+                                opacity: 0.8,
+                                fontSize: '2em',
+                                "&::placeholder": {
+                                    opacity: 1,
+                                    fontSize: '3em',
+                                },
+                            },
+                            label: { color: '#C6D8D3', fontSize: '1.75em', margin: 'auto 1em' },
+                        }}
+                        style={{
+                            width: '100%'
+                        }}
                     />
                     {
                         (visible2) ?
@@ -146,24 +146,26 @@ export default function Register() {
                             :
                             <VisibilityOffOutlinedIcon className="register__icon" onClick={() => setVisible2(true)} />
                     }
-                </Box> 
+                </Box>
             </div>
             <div className="register__footer">
-                <Button 
+                <Button
                     variant='contained'
-					color='primary'
-					style={{
-						textTransform: 'none',
-						fontSize: '1.5em',
-						fontWeight: 'bold',
-						boxShadow: '0px 5px 5px -5px #2d2a32',
-						borderRadius: '10px',
-						width: '100%'
-					}}
-                    >Register
+                    color='primary'
+                    style={{
+                        textTransform: 'none',
+                        fontSize: '1.5em',
+                        fontWeight: 'bold',
+                        boxShadow: '0px 5px 5px -5px #2d2a32',
+                        borderRadius: '10px',
+                        width: '100%'
+                    }}
+                    onClick={() => RegisterFunction()}
+                >
+                    Register
                 </Button>
                 <div className="register__subtext">
-                    <p 
+                    <p
                         className="register__p"
                         onClick={() => window.location.href = '/login'}
                     >Already have an account? Login</p>
