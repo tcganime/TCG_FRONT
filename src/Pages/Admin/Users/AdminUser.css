@@ -1,0 +1,43 @@
+.admin__user {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin: auto 5%;
+}
+
+.admin__user__header {
+    font-size: 1.5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.admin__user__upper__body {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 80%;
+    margin: auto 10%;
+}
+
+.admin__user__search {
+    display: flex;
+    width: 80%;
+    margin: auto 10%
+}
+
+.admin__user__body {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 80%;
+    margin: auto 10%
+}
+
+.admin__user__card {
+    display: flex;
+    width: 40%;
+    margin: 2% 5%;
+    justify-content: center;
+}
