@@ -58,23 +58,24 @@ function AdminUser() {
             </div>
             <div className="admin__user__body">
                 {
-                    searchUsers.filter((searchUser) => {
-                        if (search === '') {
-                            return searchUser
-                        } else if (searchUser.username.toLowerCase().includes(search.toLowerCase())) {
-                            return searchUser
-                        }
-                    }).map((searchUser) => {
-                        return (
-                            <div className="admin__user__card">
+                    searchUsers
+                        .filter((searchUser) => {
+                            if (search === '') {
+                                return true; // Include all users when the search is empty
+                            } else {
+                                return searchUser.username.toLowerCase().includes(search.toLowerCase());
+                            }
+                        })
+                        .map((searchUser) => (
+                            <div className="admin__user__card" key={searchUser.id}>
                                 <UserCard
                                     id={searchUser.id}
                                     username={searchUser.username}
                                 />
                             </div>
-                        )
-                    })
+                        ))
                 }
+
             </div>
         </div>
     )
