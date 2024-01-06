@@ -1,4 +1,4 @@
-import { Button, Card, CardActions, CardContent, Typography } from "@mui/material"
+import { Button, Card, CardActions, CardContent } from "@mui/material"
 
 function UserCard(
     props: {
