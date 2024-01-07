@@ -1,4 +1,4 @@
-import { Button, Card, CardActions, CardContent, CardMedia } from "@mui/material"
+import { Button, Card, CardActions, CardContent } from "@mui/material"
 
 import UserDefaultPicture from '../../../../assets/image/default_picture.png';
 import { useEffect, useState } from "react";
@@ -41,7 +41,11 @@ function UserCard(
                         })
                 }
             })
-    }, [])
+            .catch(error => {
+                console.log(error)
+                alert('An error occured, please try again later.')
+            })
+    }, [props.id])
 
     return (
         <Card style={{
@@ -60,6 +64,7 @@ function UserCard(
                 <img
                     className="user__card__image"
                     title={user.username}
+                    alt={user.username}
                     src={user.profile_picture ? user.profile_picture : UserDefaultPicture}
                 />
             </CardContent>
